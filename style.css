@@ -1,0 +1,453 @@
+/* 
+Styles for Qaisar Roonjha - Sophisticated Dark Portfolio
+Theme: Sophisticated Dark
+*/
+
+:root {
+    --bg: #0A0A0B;
+    --surface: #141416;
+    --accent: #D4AF37;
+    --text: #F3F4F6;
+    --text-dim: rgba(243, 244, 246, 0.6);
+    --border: rgba(212, 175, 55, 0.15);
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--bg);
+}
+
+/* Utilities */
+.serif { font-family: var(--font-serif); }
+.mono { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
+.glass { 
+    background: rgba(20, 20, 22, 0.6); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid var(--border); 
+}
+
+.uppercase-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+p {
+    font-weight: 300;
+    color: var(--text-dim);
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+section {
+    padding: 10rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 0;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid transparent;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: -0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a.active {
+    background: white;
+    color: black !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: var(--accent);
+    opacity: 0.8 !important;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    max-width: 550px;
+}
+
+/* Call to Action */
+.cta-button {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 3.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Sections Styling */
+.section-header {
+    margin-bottom: 6rem;
+    max-width: 700px;
+}
+
+.section-header h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+
+/* Grid Layouts */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    background: rgba(212, 175, 55, 0.03);
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    margin: 1.5rem 0 1rem;
+    font-size: 1.75rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Initiatives */
+.initiatives-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--border);
+}
+
+.initiative-item {
+    background: var(--bg);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    transition: background 0.3s ease;
+}
+
+.initiative-item:hover {
+    background: var(--surface);
+}
+
+.initiative-item h4 {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .initiative-item {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .initiative-item span { margin-bottom: -1rem; }
+}
+
+/* Skills */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* Impact Section */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.impact-stat {
+    padding: 4rem 2rem;
+    text-align: left;
+    border-left: 2px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.impact-stat:hover {
+    border-color: var(--accent);
+}
+
+.stat-number {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.stat-label {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 850px) {
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Contact */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+.contact-info h2 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.social-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.social-links a {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+.contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 4rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: "→";
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--accent);
+    opacity: 0.3;
+}
+
+/* Footer */
+footer {
+    padding: 6rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+@media (max-width: 700px) {
+    footer .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific Section Adjustments for the Theme */
+#about {
+    background: var(--surface);
+}
+
+.accent-text {
+    color: var(--accent);
+}
