@@ -4,12 +4,12 @@ Theme: Sophisticated Dark
 */
 
 :root {
-    --bg: #262626;
-    --surface: #333333;
-    --accent: #D4AF37;
-    --text: #F3F4F6;
-    --text-dim: rgba(243, 244, 246, 0.6);
-    --border: rgba(212, 175, 55, 0.15);
+    --bg: #87CEEB;
+    --surface: #E0F2FE;
+    --accent: #0284C7;
+    --text: #0C4A6E;
+    --text-dim: rgba(12, 74, 110, 0.7);
+    --border: rgba(2, 132, 199, 0.2);
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -39,7 +39,7 @@ body {
 .serif { font-family: var(--font-serif); }
 .mono { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
 .glass { 
-    background: rgba(20, 20, 22, 0.6); 
+    background: rgba(255, 255, 255, 0.4); 
     backdrop-filter: blur(10px); 
     border: 1px solid var(--border); 
 }
@@ -74,7 +74,7 @@ p {
 
 section {
     padding: 10rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation */
@@ -123,8 +123,8 @@ nav .container {
 }
 
 .nav-links a.active {
-    background: white;
-    color: black !important;
+    background: var(--text);
+    color: white !important;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -409,7 +409,7 @@ nav .container {
 /* Footer */
 footer {
     padding: 6rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 footer .container {
