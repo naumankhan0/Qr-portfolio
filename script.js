@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            nav.style.background = 'rgba(5, 5, 5, 0.95)';
-            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            nav.style.background = 'rgba(38, 38, 38, 0.98)';
+            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
         } else {
             nav.style.background = 'transparent';
             nav.style.borderBottom = '1px solid transparent';

@@ -4,8 +4,8 @@ Theme: Sophisticated Dark
 */
 
 :root {
-    --bg: #0A0A0B;
-    --surface: #141416;
+    --bg: #262626;
+    --surface: #333333;
     --accent: #D4AF37;
     --text: #F3F4F6;
     --text-dim: rgba(243, 244, 246, 0.6);
